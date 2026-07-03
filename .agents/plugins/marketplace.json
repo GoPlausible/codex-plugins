@@ -1,7 +1,7 @@
 {
-  "name": "goplausible-ac2",
+  "name": "goplausible",
   "interface": {
-    "displayName": "GoPlausible AC2"
+    "displayName": "GoPlausible Codex Plugins"
   },
   "plugins": [
     {
