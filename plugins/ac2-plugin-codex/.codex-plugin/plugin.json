@@ -1,0 +1,31 @@
+{
+  "name": "ac2-plugin-codex",
+  "version": "0.1.0",
+  "description": "AC2 plugin for Codex — pair an AC2 wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
+  "author": {
+    "name": "GoPlausible",
+    "email": "info@goplausible.com",
+    "url": "https://github.com/GoPlausible"
+  },
+  "homepage": "https://github.com/GoPlausible/ac2-sdk/tree/main/packages/ac2-plugin-codex",
+  "repository": "https://github.com/GoPlausible/ac2-sdk",
+  "license": "Apache-2.0",
+  "keywords": ["ac2", "wallet", "signing", "liquid-auth", "webrtc", "mcp", "x402", "algorand"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AC2 (GoPlausible)",
+    "shortDescription": "Pair Codex with an AC2 wallet for signing and paid HTTP calls.",
+    "longDescription": "AC2 connects Codex to a user-controlled wallet over Liquid Auth and WebRTC. It provides wallet pairing, two-way chat transport, cryptographic signing and verification, capability discovery, remote approval relay, and x402 paid HTTP resource access without exposing private keys to the agent.",
+    "developerName": "GoPlausible",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "MCP", "Wallet signing", "x402 payments"],
+    "websiteURL": "https://github.com/GoPlausible/ac2-sdk",
+    "brandColor": "#0EA5A4",
+    "defaultPrompt": [
+      "Pair my AC2 wallet.",
+      "Show my wallet capabilities.",
+      "Sign this message with my wallet."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

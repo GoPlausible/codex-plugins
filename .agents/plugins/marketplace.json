@@ -1,0 +1,20 @@
+{
+  "name": "goplausible-ac2",
+  "interface": {
+    "displayName": "GoPlausible AC2"
+  },
+  "plugins": [
+    {
+      "name": "ac2-plugin-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ac2-plugin-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
