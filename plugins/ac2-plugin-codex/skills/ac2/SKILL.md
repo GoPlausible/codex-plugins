@@ -9,6 +9,35 @@ AC2 connects you to the **user's wallet** (such as Regent) over a live WebRTC da
 
 You interact through one discovery tool, one signing tool, and a matching set of verifier tools (all prefixed `ac2_`).
 
+## Command equivalents
+
+Codex does not expose Claude-style `/ac2:*` plugin commands. Treat these natural
+requests as command equivalents and call the matching tool directly:
+
+- Pair/connect wallet: call `ac2_pair`.
+- Status/connection check: call `ac2_status`.
+- Capabilities/accounts/addresses: call `ac2_capabilities`.
+- Sign/approve/authorize with wallet: call `ac2_sign` after choosing the right signer and `sig_hint`.
+- Verify a signature: call the matching `ac2_verify_*` tool.
+- Version: call `ac2_version`.
+- Forget/unpair/disconnect permanently: confirm first, then call `ac2_forget`.
+
+## Pairing display: QR code is mandatory
+
+When the user wants to pair/connect a wallet, call `ac2_pair` and present the
+result so the user can actually scan or open it:
+
+1. Show the deep link and request ID.
+2. Show the **complete QR code** from the tool result. Do not summarize it, omit
+   it, replace it with `<image content>`, or show only a clipped/partial QR.
+3. If Codex's tool-call preview shows a clipped QR or collapses it, re-render the
+   full QR in your final response from the `ac2_pair` result. The QR must remain
+   a complete rectangular block; preserve all lines and spacing.
+4. Tell the user to scan the QR with Regent or open the deep link on their phone.
+
+If the QR cannot be displayed completely in the current surface, say that clearly
+and still provide the deep link and request ID. Do not pretend the QR was shown.
+
 ## Discover first: `ac2_capabilities`
 
 **Call `ac2_capabilities` at the start of every new conversation.** Every call hits the wire and returns the wallet's current state — the cache was removed in plugin v0.0.84 so you don't have to worry about stale primaries / accounts after the user changes wallet state. (The tool still accepts a `refresh` parameter for API stability but it's a no-op.)
