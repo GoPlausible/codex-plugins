@@ -15,6 +15,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "codex-plugin-algorand",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-plugin-algorand"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Utilities"
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "algorand-mcp": {
+      "name": "Algorand MCP",
+      "description": "Algorand MCP server — wallet, transactions, smart contracts, indexer, DEX, NFD, prediction markets, and x402 payments",
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@goplausible/algorand-mcp@4.4.0"
+      ]
+    }
+  }
+}

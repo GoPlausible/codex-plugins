@@ -2,38 +2,68 @@
 
 Marketplace for GoPlausible Codex plugins.
 
-## Install AC2 for Codex
+| Plugin | Version | What it does |
+| --- | --- | --- |
+| [`ac2-plugin-codex`](./plugins/ac2-plugin-codex/) | `0.2.3` | AC2 — pair Codex with an AC2 wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
+| [`codex-plugin-algorand`](./plugins/codex-plugin-algorand/) | `1.0.0` | Algorand — 122 MCP tools (wallet, transactions, smart contracts, DEX, NFDs, prediction markets) plus 9 expert skills for AlgoKit, Algorand TypeScript/Python, and x402 development. |
 
-Add this marketplace to Codex:
+## Add the marketplace (once)
 
 ```bash
-codex plugin marketplace add GoPlausible/codex-plugins --ref main
+codex plugin marketplace add https://github.com/GoPlausible/codex-plugins.git
 ```
 
-Then restart Codex, open:
+Then restart Codex and open `/plugins` — select **GoPlausible** and install what you need. Or install from the CLI:
 
-```text
-/plugins
+```bash
+codex plugin add ac2-plugin-codex@goplausible
+codex plugin add codex-plugin-algorand@goplausible
 ```
 
-Select **GoPlausible AC2**, install **ac2-plugin-codex**, start a new thread, and verify the MCP server with:
+Start a new thread after installing, and verify the MCP servers with `/mcp` — you should see `ac2-channel` and/or `algorand-mcp`.
 
-```text
-/mcp
-```
+## Skip per-tool approval prompts (optional)
 
-You should see `ac2-channel`. Codex adds `[plugins."ac2-plugin-codex@goplausible"] enabled = true` during install. To let the AC2 MCP server run without asking for approval on every AC2 tool call, add only this block to `~/.codex/config.toml`:
+Codex adds the plugin enable blocks during install. To let each plugin's MCP server run without asking for approval on every tool call, add the matching block(s) to `~/.codex/config.toml`:
 
 ```toml
 [plugins."ac2-plugin-codex@goplausible".mcp_servers."ac2-channel"]
 enabled = true
 default_tools_approval_mode = "approve"
+
+[plugins."codex-plugin-algorand@goplausible".mcp_servers."algorand-mcp"]
+enabled = true
+default_tools_approval_mode = "approve"
 ```
 
-Wallet signatures, x402 payments, and passkey approvals still require explicit approval in Regent. Try:
+For AC2, wallet signatures, x402 payments, and passkey approvals still require explicit approval in Regent — this setting only silences Codex's local tool-call prompts.
+
+## Try them
 
 ```text
 Pair my AC2 wallet.
+Check the Algorand testnet node status.
 ```
 
-The plugin launches its MCP server through the published npm package `@goplausible/ac2-plugin-codex`.
+Typing `$` in the composer lists the installed skills (AC2 usage, AlgoKit, Algorand TypeScript/Python, x402 payments, and more).
+
+## Update
+
+```bash
+codex plugin marketplace upgrade goplausible
+codex plugin add ac2-plugin-codex@goplausible
+codex plugin add codex-plugin-algorand@goplausible
+```
+
+Start a new thread after updating so Codex picks up the new versions.
+
+## How they run
+
+Both plugins launch their MCP servers via `npx` from published npm packages: [`@goplausible/ac2-plugin-codex`](https://www.npmjs.com/package/@goplausible/ac2-plugin-codex) and [`@goplausible/algorand-mcp`](https://www.npmjs.com/package/@goplausible/algorand-mcp).
+
+## Links
+
+- AC2 protocol & SDK: https://github.com/GoPlausible/ac2-sdk
+- Liquid Auth Cloud: https://liquidauth.goplausible.xyz
+- Claude Code edition of the Algorand plugin: https://github.com/GoPlausible/claude-algorand-plugin
+- GoPlausible: https://goplausible.com
