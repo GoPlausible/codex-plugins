@@ -1,5 +1,5 @@
 {
-  "name": "codex-plugin-algorand",
+  "name": "algorand-plugin",
   "version": "1.0.0",
   "description": "Algorand blockchain integration for Codex — 122 MCP tools (wallet, transactions, smart contracts, DEX swaps, NFDs, prediction markets) plus expert skills for AlgoKit, Algorand TypeScript/Python, and x402 HTTP-native payments.",
   "author": {

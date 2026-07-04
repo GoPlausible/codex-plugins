@@ -17,10 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "codex-plugin-algorand",
+      "name": "algorand-plugin",
       "source": {
         "source": "local",
-        "path": "./plugins/codex-plugin-algorand"
+        "path": "./plugins/algorand-plugin"
       },
       "policy": {
         "installation": "AVAILABLE",
