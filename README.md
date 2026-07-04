@@ -4,8 +4,8 @@ Marketplace for GoPlausible Codex plugins.
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| [`ac2-plugin-codex`](./plugins/ac2-plugin-codex/) | `0.2.3` | AC2 — pair Codex with an AC2 wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
-| [`algorand-plugin`](./plugins/algorand-plugin/) | `1.0.0` | Algorand — 122 MCP tools (wallet, transactions, smart contracts, DEX, NFDs, prediction markets) plus 9 expert skills for AlgoKit, Algorand TypeScript/Python, and x402 development. |
+| [`ac2`](./plugins/ac2/) | `0.2.3` | AC2 — pair Codex with an AC2 wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
+| [`algorand`](./plugins/algorand/) | `1.0.0` | Algorand — 122 MCP tools (wallet, transactions, smart contracts, DEX, NFDs, prediction markets) plus 9 expert skills for AlgoKit, Algorand TypeScript/Python, and x402 development. |
 
 ## Add the marketplace (once)
 
@@ -16,8 +16,8 @@ codex plugin marketplace add https://github.com/GoPlausible/codex-plugins.git
 Then restart Codex and open `/plugins` — select **GoPlausible** and install what you need. Or install from the CLI:
 
 ```bash
-codex plugin add ac2-plugin-codex@goplausible
-codex plugin add algorand-plugin@goplausible
+codex plugin add ac2@goplausible
+codex plugin add algorand@goplausible
 ```
 
 Start a new thread after installing, and verify the MCP servers with `/mcp` — you should see `ac2-channel` and/or `algorand-mcp`.
@@ -27,11 +27,11 @@ Start a new thread after installing, and verify the MCP servers with `/mcp` — 
 Codex adds the plugin enable blocks during install. To let each plugin's MCP server run without asking for approval on every tool call, add the matching block(s) to `~/.codex/config.toml`:
 
 ```toml
-[plugins."ac2-plugin-codex@goplausible".mcp_servers."ac2-channel"]
+[plugins."ac2@goplausible".mcp_servers."ac2-channel"]
 enabled = true
 default_tools_approval_mode = "approve"
 
-[plugins."algorand-plugin@goplausible".mcp_servers."algorand-mcp"]
+[plugins."algorand@goplausible".mcp_servers."algorand-mcp"]
 enabled = true
 default_tools_approval_mode = "approve"
 ```
@@ -51,8 +51,8 @@ Typing `$` in the composer lists the installed skills (AC2 usage, AlgoKit, Algor
 
 ```bash
 codex plugin marketplace upgrade goplausible
-codex plugin add ac2-plugin-codex@goplausible
-codex plugin add algorand-plugin@goplausible
+codex plugin add ac2@goplausible
+codex plugin add algorand@goplausible
 ```
 
 Start a new thread after updating so Codex picks up the new versions.

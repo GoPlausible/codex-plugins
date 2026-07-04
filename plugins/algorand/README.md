@@ -1,4 +1,4 @@
-# algorand-plugin
+# algorand plugin for Codex
 
 Algorand blockchain integration for **Codex**, by GoPlausible. One install gives
 Codex the full Algorand stack:
@@ -33,14 +33,14 @@ with spend caps.
 # one-time: add the marketplace
 codex plugin marketplace add https://github.com/GoPlausible/codex-plugins.git
 # install
-codex plugin add algorand-plugin@goplausible
+codex plugin add algorand@goplausible
 ```
 
 To let the Algorand MCP server run without approval prompts on every tool
 call, add this block to `~/.codex/config.toml`:
 
 ```toml
-[plugins."algorand-plugin@goplausible".mcp_servers."algorand-mcp"]
+[plugins."algorand@goplausible".mcp_servers."algorand-mcp"]
 enabled = true
 default_tools_approval_mode = "approve"
 ```
@@ -51,7 +51,7 @@ Start a new Codex thread after installing.
 
 ```bash
 codex plugin marketplace upgrade goplausible
-codex plugin add algorand-plugin@goplausible
+codex plugin add algorand@goplausible
 ```
 
 Start a new thread after updating so Codex picks up the new version.

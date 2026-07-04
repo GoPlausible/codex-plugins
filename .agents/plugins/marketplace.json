@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "ac2-plugin-codex",
+      "name": "ac2",
       "source": {
         "source": "local",
-        "path": "./plugins/ac2-plugin-codex"
+        "path": "./plugins/ac2"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -17,10 +17,10 @@
       "category": "Productivity"
     },
     {
-      "name": "algorand-plugin",
+      "name": "algorand",
       "source": {
         "source": "local",
-        "path": "./plugins/algorand-plugin"
+        "path": "./plugins/algorand"
       },
       "policy": {
         "installation": "AVAILABLE",
