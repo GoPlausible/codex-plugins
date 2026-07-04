@@ -7,7 +7,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@goplausible/ac2-plugin-codex@0.2.1"
+        "@goplausible/ac2-plugin-codex@0.2.2"
       ]
     }
   }

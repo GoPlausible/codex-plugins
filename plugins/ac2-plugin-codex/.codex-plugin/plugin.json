@@ -1,6 +1,6 @@
 {
   "name": "ac2-plugin-codex",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "AC2 plugin for Codex — pair an AC2 wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
   "author": {
     "name": "GoPlausible",
