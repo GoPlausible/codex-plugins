@@ -4,7 +4,7 @@ Marketplace for GoPlausible Codex plugins.
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| [`ac2`](./plugins/ac2/) | `0.2.5` | AC2 — pair Codex with an AC2 wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
+| [`ac2`](./plugins/ac2/) | `0.2.6` | AC2 — pair Codex with an AC2 wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
 | [`algorand`](./plugins/algorand/) | `1.0.0` | Algorand — 122 MCP tools (wallet, transactions, smart contracts, DEX, NFDs, prediction markets) plus 9 expert skills for AlgoKit, Algorand TypeScript/Python, and x402 development. |
 
 ## Add the marketplace (once)
