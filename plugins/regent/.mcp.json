@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "regent-channel": {
+      "name": "Regent Channel",
+      "description": "Regent wallet channel over Liquid Auth (FIDO2) + WebRTC — two-way chat, cryptographic signing, remote approval, and x402 payments",
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@goplausible/regent-plugin-codex@0.2.8"
+      ]
+    }
+  }
+}

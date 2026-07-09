@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "ac2",
+      "name": "regent",
       "source": {
         "source": "local",
-        "path": "./plugins/ac2"
+        "path": "./plugins/regent"
       },
       "policy": {
         "installation": "AVAILABLE",

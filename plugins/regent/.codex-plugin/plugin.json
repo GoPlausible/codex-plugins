@@ -1,0 +1,45 @@
+{
+  "name": "regent",
+  "version": "0.2.8",
+  "description": "Regent plugin for Codex — pair an Regent wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
+  "author": {
+    "name": "GoPlausible",
+    "email": "info@goplausible.com",
+    "url": "https://goplausible.com"
+  },
+  "homepage": "https://goplausible.com/regent-sdk/tree/main/packages/regent-plugin-codex",
+  "repository": "https://goplausible.com/regent-sdk",
+  "license": "Apache-2.0",
+  "keywords": [
+    "regent",
+    "wallet",
+    "signing",
+    "liquid-auth",
+    "webrtc",
+    "mcp",
+    "x402",
+    "algorand"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Regent (GoPlausible)",
+    "shortDescription": "Pair Codex with an Regent wallet for signing and paid HTTP calls.",
+    "longDescription": "Regent connects Codex to a user-controlled wallet over Liquid Auth and WebRTC. It provides wallet pairing, two-way chat transport, cryptographic signing and verification, capability discovery, remote approval relay, and x402 paid HTTP resource access without exposing private keys to the agent.",
+    "developerName": "GoPlausible",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "MCP",
+      "Wallet signing",
+      "x402 payments"
+    ],
+    "websiteURL": "https://goplausible.com/regent-sdk",
+    "brandColor": "#0EA5A4",
+    "defaultPrompt": [
+      "Pair my Regent wallet.",
+      "Show my wallet capabilities.",
+      "Sign this message with my wallet."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
