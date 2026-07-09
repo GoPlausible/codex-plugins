@@ -4,7 +4,7 @@ Marketplace for GoPlausible Codex plugins.
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| [`regent`](./plugins/regent/) | `0.2.7` | Regent — pair Codex with an Regent wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
+| [`regent`](./plugins/regent/) | `1.0.0` | Regent — pair Codex with an Regent wallet (e.g. [Regent](https://liquidauth.goplausible.xyz)) for two-way chat, cryptographic signing, remote approvals, and x402 payments. Keys stay in the wallet. |
 | [`algorand`](./plugins/algorand/) | `1.0.0` | Algorand — 122 MCP tools (wallet, transactions, smart contracts, DEX, NFDs, prediction markets) plus 9 expert skills for AlgoKit, Algorand TypeScript/Python, and x402 development. |
 
 ## Add the marketplace (once)

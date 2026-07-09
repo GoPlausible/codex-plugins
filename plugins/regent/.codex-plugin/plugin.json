@@ -1,6 +1,6 @@
 {
   "name": "regent",
-  "version": "0.2.8",
+  "version": "1.0.0",
   "description": "Regent plugin for Codex — pair an Regent wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
   "author": {
     "name": "GoPlausible",

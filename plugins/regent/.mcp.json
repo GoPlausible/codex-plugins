@@ -7,7 +7,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@goplausible/regent-plugin-codex@0.2.8"
+        "@goplausible/regent-plugin-codex@1.0.0"
       ]
     }
   }
