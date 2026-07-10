@@ -1,7 +1,7 @@
 {
   "name": "regent",
   "version": "1.0.0",
-  "description": "Regent plugin for Codex — pair an Regent wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
+  "description": "Regent plugin for Codex — pair a Regent wallet over Liquid Auth (FIDO2 + WebRTC) for signing, verification, remote approval, and x402 payments.",
   "author": {
     "name": "GoPlausible",
     "email": "info@goplausible.com",
@@ -23,7 +23,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Regent (GoPlausible)",
-    "shortDescription": "Pair Codex with an Regent wallet for signing and paid HTTP calls.",
+    "shortDescription": "Pair Codex with a Regent wallet for signing and paid HTTP calls.",
     "longDescription": "Regent connects Codex to a user-controlled wallet over Liquid Auth and WebRTC. It provides wallet pairing, two-way chat transport, cryptographic signing and verification, capability discovery, remote approval relay, and x402 paid HTTP resource access without exposing private keys to the agent.",
     "developerName": "GoPlausible",
     "category": "Productivity",
