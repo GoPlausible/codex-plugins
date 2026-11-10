@@ -7,7 +7,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@goplausible/algorand-mcp@4.4.0"
+        "@goplausible/algorand-mcp@4.4.4"
       ]
     }
   }
